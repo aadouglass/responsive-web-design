@@ -32,6 +32,18 @@ header {
 #main {
   display: block;
   padding: 0 30px; }
+  @media all and (min-width: 600px) {
+    #main {
+      display: inline; }
+      #main #content {
+        background-color: #afa;
+        float: right; }
+      #main #sidebar-left {
+        background-color: #aaf;
+        float: left; }
+      #main #sidebar-right {
+        background-color: #faa;
+        clear: both; } }
 
 footer {
   background-color: #D3D3D3; }

@@ -60,6 +60,25 @@ header {
 #main {
 	display: block;
 	padding: 0 $gutter_mobile;
+
+	@media all and (min-width: $media_ewok) {
+		display: inline;
+
+		#content {
+			background-color: #afa;
+			float: right;
+		}
+
+		#sidebar-left {
+			background-color: #aaf;
+			float: left;
+		}
+
+		#sidebar-right {
+			background-color: #faa;
+			clear: both;
+		}
+	}
 }
 
 footer {
