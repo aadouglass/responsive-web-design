@@ -14,14 +14,14 @@ header {
         float: right;
         box-sizing: border-box;
         width: 60%;
-        padding: 20px;
+        padding: 30px;
         text-align: right; } }
   @media all and (min-width: 600px) {
     header img.logo {
       float: left;
       box-sizing: border-box;
       width: 40%;
-      padding: 20px; } }
+      padding: 30px; } }
 
 #container {
   margin-left: auto;
