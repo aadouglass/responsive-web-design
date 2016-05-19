@@ -13,7 +13,7 @@ $gray: #808080;
 $lightgrey: #D3D3D3;
 $blue: #191970;
 $light_blue: #1E90FF;
-$bg_blue: #F0F8FF;
+$bg_blue: #ADD8E6;
 
 $gutter_mobile: 30px;
 
@@ -67,27 +67,28 @@ header {
 	display: block;
 	line-height: 24px;
 	padding: 0 $gutter_mobile;
-	background-color: $bg_blue;
 
 	@media all and (min-width: $media_ewok) {
 		display: inline;
-		#content {
-			background-color: #afa;
+		float: left;
 
-		box-sizing: border-box;
-		padding: 20px;
+		#content {
+			background-color: $bg_blue;
+			@include border_box_padding;
 			width:75%;
 			float: right;
 		}
 
 		#sidebar-left {
-			background-color: #aaf;
+			background-color: $white;
+			@include border_box_padding;
 			width: 25%;
 			float: left;
 		}
 
 		#sidebar-right {
-			background-color: #faa;
+			background-color: $white;
+			@include border_box_padding;
 			clear: both;
 		}
 	}
