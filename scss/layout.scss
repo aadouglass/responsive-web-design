@@ -1,0 +1,144 @@
+@mixin center {
+	margin-left: auto;
+	margin-right: auto;
+}
+$font: "DejaVu Sans",sans-serif;
+$white: #FFFFFF;
+$gray: #808080;
+$lightgrey: #D3D3D3;
+$blue: #191970;
+$light_blue: #1E90FF;
+
+$gutter_mobile: 30px;
+
+$header_spacing_mobile: 20px;
+$footer_spacing_mobile: 10px;
+
+$media_yoda: 480px;
+$media_ewok: 600px;
+$media_luke: 800px;
+$media_vader: 1000px;
+
+body {
+	background-color: $gray;
+	font-family: $font;
+}
+
+header {
+	background-color: $white;
+
+	form.search { 
+		@include center;
+		text-align: center;
+		margin-bottom: $header_spacing_mobile;
+
+		@media all and (min-width: $media_ewok) {
+			float: right;
+			box-sizing: border-box;
+			width: 60%;
+			padding: $header_spacing_mobile;
+			text-align: right;
+		}
+	}
+
+	img.logo	{
+		@media all and (min-width: $media_ewok) {
+			float: left;
+			box-sizing: border-box;
+			width: 40%;
+			padding: $header_spacing_mobile;
+		}
+	}
+}
+
+#container {
+	@include center;
+	max-width: 1200px;
+	background-color: $white;
+}
+
+#main {
+	display: block;
+	padding: 0 $gutter_mobile;
+}
+
+footer {
+	background-color: $lightgrey;
+
+	img.logo {
+		width: 55%;
+		padding: $footer_spacing_mobile 0;
+	}
+}
+
+img.logo { 
+	@include center;
+	width: 70%;
+	display: block;
+	padding: $header_spacing_mobile 0;
+}
+
+ul.menu {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+
+	@media all and (min-width: $media_ewok) {
+		clear: both;
+		padding: 5px $gutter_mobile;
+		background-color: $blue;
+	}
+
+	li 	{
+		@media (min-width: $media_ewok) {	
+			display: inline;
+			padding: 0 5px 0 0;
+
+			&:last-of-type {
+				padding-right: 0;
+			}
+		}
+
+		@media (min-width: $media_luke) {
+			padding-right: 10px;
+		}	
+
+		a { 
+			width: 100%;
+			box-sizing: border-box;
+			display: block;
+			background-color: $blue;
+			padding: 5px $gutter_mobile;
+			border-bottom: 1px solid $light_blue;		
+			text-decoration: none;
+			color: white;
+			font-size: 18px;
+			line-height: 24px;
+
+			@media (min-width: $media_ewok) {
+				display: inline;
+				background-color: transparent;
+				border-bottom: 0 none;
+				font-size: 14px;
+				padding: 0;
+			}
+
+			@media (min-width: $media_luke) {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+#main {
+	display: block;
+	line-height: 24px;
+}
+
+div.copyright {
+	@include center;	
+	font-size: 14px;
+	width: 90%;
+	padding: $footer_spacing_mobile $gutter_mobile;
+	text-align: center;	
+}
