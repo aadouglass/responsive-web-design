@@ -2,12 +2,18 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+@mixin border_box_padding{
+	box-sizing: border-box;
+	padding: 20px;
+}
+
 $font: "DejaVu Sans",sans-serif;
 $white: #FFFFFF;
 $gray: #808080;
 $lightgrey: #D3D3D3;
 $blue: #191970;
 $light_blue: #1E90FF;
+$bg_blue: #F0F8FF;
 
 $gutter_mobile: 30px;
 
@@ -59,18 +65,24 @@ header {
 
 #main {
 	display: block;
+	line-height: 24px;
 	padding: 0 $gutter_mobile;
+	background-color: $bg_blue;
 
 	@media all and (min-width: $media_ewok) {
 		display: inline;
-
 		#content {
 			background-color: #afa;
+
+		box-sizing: border-box;
+		padding: 20px;
+			width:75%;
 			float: right;
 		}
 
 		#sidebar-left {
 			background-color: #aaf;
+			width: 25%;
 			float: left;
 		}
 
@@ -147,11 +159,6 @@ ul.menu {
 			}
 		}
 	}
-}
-
-#main {
-	display: block;
-	line-height: 24px;
 }
 
 div.copyright {
