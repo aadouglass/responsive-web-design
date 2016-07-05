@@ -63,6 +63,17 @@ header {
 	background-color: $white;
 }
 
+#premain { 
+	display: block;
+	background-color: $lightgrey;
+
+	img.photorific {
+		width: 100%;
+		display: inline;
+
+	}
+}
+
 #main {
 	display: block;
 	line-height: 24px;
@@ -127,12 +138,12 @@ ul.menu {
 			padding: 0 5px 0 0;
 
 			&:last-of-type {
-				padding-right: 0;
+				padding-right: 0;	
 			}
 		}
 
 		@media (min-width: $media_luke) {
-			padding-right: 10px;
+			padding-right: 30px;
 		}	
 
 		a { 

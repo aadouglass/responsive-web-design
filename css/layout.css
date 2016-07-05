@@ -29,6 +29,13 @@ header {
   max-width: 1200px;
   background-color: #FFFFFF; }
 
+#premain {
+  display: block;
+  background-color: #D3D3D3; }
+  #premain img.photorific {
+    width: 100%;
+    display: inline; }
+
 #main {
   display: block;
   line-height: 24px;
@@ -85,7 +92,7 @@ ul.menu {
         padding-right: 0; } }
   @media (min-width: 800px) {
     ul.menu li {
-      padding-right: 10px; } }
+      padding-right: 30px; } }
   ul.menu li a {
     width: 100%;
     box-sizing: border-box;
