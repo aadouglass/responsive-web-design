@@ -71,6 +71,11 @@ header {
 		width: 100%;
 		display: inline;
 
+		@media all and (min-width: $media_ewok) {
+			width: 33.33%;
+			float: left;
+			overflow: hidden;
+		}
 	}
 }
 
@@ -121,6 +126,14 @@ img.logo {
 	padding: $header_spacing_mobile 0;
 }
 
+ul.list {
+	@media all and (min-width: $media_ewok) {
+		list-style: none;
+		padding-left: 0;
+		margin: 0;
+	}
+}
+		
 ul.menu {
 	list-style-type: none;
 	padding-left: 0;
